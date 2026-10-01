@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт-визитка</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background-color: #f4f4f9; color: #333; padding: 20px; transition: 0.3s; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 2px solid #ccc; }
+    nav a { margin-left: 15px; text-decoration: none; color: #007bff; }
+    main { margin-top: 20px; }
+    section { background: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+    .cards { display: flex; gap: 15px; margin-top: 10px; }
+    .card { flex: 1; padding: 15px; background: #eef2f5; border-radius: 5px; }
+    footer { text-align: center; padding: 15px 0; border-top: 1px solid #ccc; font-size: 14px; }
+    button { padding: 8px 16px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 4px; }
+    .dark-mode { background-color: #1e1e1e; color: #f4f4f9; }
+    .dark-mode section, .dark-mode .card { background-color: #2b2b2b; color: #ffffff; }
+    @media (max-width: 600px) {
+      header { flex-direction: column; gap: 10px; }
+      .cards { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Мой Портфолио</h1>
+    <nav>
+      <a href="#about">Обо мне</a>
+      <a href="#services">Услуги</a>
+    </nav>
+    <button id="themeToggle">Сменить тему</button>
+  </header>
+  <main>
+    <section id="about">
+      <h2>Обо мне</h2>
+      <p>Привет! Я веб-разработчик. Изучаю HTML, CSS и JavaScript.</p>
+    </section>
+    <section id="services">
+      <h2>Мои навыки</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>HTML & CSS</h3>
+          <p>Адаптивная верстка сайтов.</p>
+        </div>
+        <div class="card">
+          <h3>JavaScript</h3>
+          <p>Интерактивность и логика.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Сайт-визитка</p>
+  </footer>
+  <script>
+    const themeBtn = document.querySelector("#themeToggle");
+    themeBtn.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
